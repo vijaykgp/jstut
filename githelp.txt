@@ -18,3 +18,12 @@ cmd : git commit -m "----"
 
 7. Push to git
 cmd : git push origin <Branch Name>
+
+8. Create a new branch
+cmd : git checkout -b <Branch Name>
+
+9. Swithch to another branch
+cmd : git checkout <Branch Name>
+
+10. Check commit history
+cmd : git log --oneline
