@@ -9,3 +9,12 @@ cmd : git status
 
 4. Check current branch
 cmd : git branch
+
+5. Stage all untracked or modified files
+cmd : git add -A
+
+6. Put commit message
+cmd : git commit -m "----"
+
+7. Push to git
+cmd : git push origin <Branch Name>
