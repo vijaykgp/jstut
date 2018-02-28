@@ -27,3 +27,6 @@ cmd : git checkout <Branch Name>
 
 10. Check commit history
 cmd : git log --oneline
+
+11. Merge with master
+cmd : git merge origin master
