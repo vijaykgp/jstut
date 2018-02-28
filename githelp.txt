@@ -1,0 +1,11 @@
+1. First check git installes or not
+cmd : git 
+
+2. Clone repository to localhot
+cmd : git clone <HTTPS URL>
+
+3. Check changes to the files
+cmd : git status
+
+4. Check current branch
+cmd : git branch
