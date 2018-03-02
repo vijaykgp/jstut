@@ -21,15 +21,36 @@
         }
 
         
-        function show(){
-            var book=confirm('Book My Show');
-            if(book==true){
-                window.location="https://in.bookmyshow.com/kolkata"
-            }else{
-                alert('I dont need ticets')
-            }
-         
-        } 
+       function show(){
+           var pay=confirm('Do payment here');
+           var txt;
+           if(pay==true){
+            txt="put your payment details"
+           }else{
+               txt='payment mode cancled'
+           }
+
+           document.getElementById('payment').innerHTML=txt;
+       }
+
+
+function prom(){
+    var result=prompt('Enter your text below','Enter Text');
+    var txt;
+
+    if(result=="" | result=="null"){
+        txt='Fill this box'
+    }else{
+        txt=result
+    }
+
+    document.getElementById('promotion').innerHTML=txt
+}
+
+
+
+
+
            
     </script>
 </head>
@@ -38,6 +59,9 @@
         Test
     </span>
     <button onclick="clickFunc()">Click Me</button>
-    <button onclick="show()">Book my show</button>
+    <button onclick="show()">payment</button>
+    <p id="payment">payment section</p>
+    <button onclick="prom()">promotion</button>
+    <p id="promotion">addred</p>
 </body>
 </html>
