@@ -7,7 +7,7 @@ cmd : git clone <HTTPS URL>
 3. Check changes to the files
 cmd : git status
 
-4. Check current branch
+4. Check current branch 
 cmd : git branch
 
 5. Stage all untracked or modified files
@@ -28,5 +28,8 @@ cmd : git checkout <Branch Name>
 10. Check commit history
 cmd : git log --oneline
 
-11. Merge with master
+11. Merge with master 
 cmd : git merge origin master
+
+12. check Branch
+cmd : git branch
