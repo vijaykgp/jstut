@@ -23,7 +23,7 @@ cmd : git push origin <Branch Name>
 cmd : git checkout -b <Branch Name>
 
 9. Swithch to another branch
-cmd : git checkout <Branch Name>
+cmd : git checkout <Branch Name>j
 
 10. Check commit history
 cmd : git log --oneline
