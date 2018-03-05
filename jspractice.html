@@ -4,76 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Basics</title>
+    <title>Javascript Basics</title>
+
+<style>
+
+#maindiv{
+    height: 100vh; n
+}
+
+    #myDIV {
+    height: 250px;
+    width: 400px;
+    padding: 10px;
+    margin: 15px;
+    border: 10px solid red;
+    background-color: lightblue;
+}
+</style>
+
+
     <script>
-        display = true;
-        
-        if(display){
-            console.log("dispalyed");
-        }
-        var display;
-        function clickFunc() {
-            //window.alert("test");
-            alert("test");
-            var connf = confirm("test");
-            console.log(connf);
-            prompt('tet');
-        }
-
- function book(){
-     var book = confirm('Book your Tickets');
-     
-
-     if(book==true){
-         window.location="https://in.bookmyshow.com";
-     }else{
-        alert('Booking canceled')
-     }
- }   
- 
-
- function prom(){
-      var promotion=prompt('write text below', 'Your Text');
-      var txt;
-
-      if(promotion == "null" | promotion ==""){
-          txt="Please fill blank"
-      }else{
-          txt=promotion;
-      }
- document.getElementById('promotion').innerHTML=txt;
-
- }
-
- var serve={
-     "win":"intex",
-     "run":"dell",
-     "bug":"lenova"
- }
-
- document.write(serve.run+"</br>")
-
- var sub=['hist','geo','math','phy'];
- document.write(sub[1]+'<br>')
-
- for(b=1; b<sub.length; b++){
-     document.write(b +"look loop is running"+"<br>"+sub[b]+"<br>")
- }
+  
+  function myFunction() {
+    var elmnt = document.getElementById("myDIV").clientHeight;
+    var elmnt2 = document.getElementById("maindiv").clientHeight;
+    var total= elmnt2-elmnt
 
 
+    alert(total);
+}
+
+function validation(){
+    var name=document.formvalidation.name.value;
+    var email=document.formvalidation.email.value;
+    var pasword=document.formvalidation.email.value;
+    var result =name+email+pasword;
+
+    if(name=="" | name=="null"){
+        document.getElementById('nameerror').innerHTML="Please enter Your name";
+        return false;
+    }else if(email=="" | email=="null"){
+        document.getElementById('emailerror').innerHTML="Enter mail";
+        return false;
+    }else if(pasword=="" | pasword=="null"){
+        document.getElementById('emailerror').innerHTML="Enter password";
+        return false;
+    }else{
+            window.location="https://docs.angularjs.org/tutorial"
+    }
+
+    if(result==true){
+        window.location="https://in.bookmyshow.com";
+        return true;
+    }
 
 
+    document.getElementById('showdata').innerHTML=result
+}
        
     </script>
 </head>
 <body>
-    <span >
-        Test
-    </span>
-    <button onclick="clickFunc()">Click Me</button>
-    <button onclick="book()">Booking</button>
-    <p id="payment">payment section</p>
-    <button onclick="prom()">promotion</button>
-    <p id="promotion">addred</p>
+
+<div id="maindiv">
+        <button onclick="myFunction()">Try it</button>
+
+
+        <form name="formvalidation" method="post" action="#" onsubmit="return validation()">
+            <input type="text" name="name">
+            <div id="nameerror"></div>
+            <input type="email" name="email">
+            <div id="emailerror"></div>
+            <input type="password" name="password">
+            <div id="passerror"></div>
+            <button type="submit">submit</button>
+            <div id="totalerror"></div>
+            <div id="showdata"></div>
+        </form>
+        
+</div>
+<div id="myDIV">
+        
+</div>
 </body>
 </html>
