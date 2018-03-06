@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Data Types</title>
+</head>
+<body>
+    <h2>Login</h2>
+
+    <form>
+        <div id="error"></div>
+        <input id="user" type="text" name="user">
+        <input id="password" type="password" name="pass">
+        <input type="button" value="Login" onclick="validation()">
+    </form>
+
+
+<script>
+
+
+
+function validation(){
+    var isvalid=true;
+    var username=document.getElementById('user').value;
+    
+    var password=document.getElementById('password').value;
+    console.log(password);
+    if(username=='' || password=='' || username!="abc" || password!=123){
+        document.getElementById('error').innerHTML="Login Failed";
+        isvalid=false;
+        return isvalid;
+        console.log('add');
+    }
+    if(username=="abc" && password==123){
+       window.location.href="file:///C:/xampp/htdocs/jstut/user/profile.html";
+    }
+    
+}
+
+
+</script>
+</body>
+</html>
