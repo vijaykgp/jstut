@@ -11,21 +11,21 @@
 
     <form>
         <div id="error"></div>
-        <input id="user" type="text" name="user">
-        <input id="password" type="password" name="pass">
-        <input type="button" value="Login" onclick="validation()">
+        <input id="userr" type="text" name="user">
+        <input id="passwordd" type="password" name="pass">
+        <input type="button" value="Login" onclick="validation('userr','passwordd')">
     </form>
-
+    <p id="result"></p>
 
 <script>
 
 
 
-function validation(){
+function validation(user, password){
     var isvalid=true;
-    var username=document.getElementById('user').value;
+    var username=document.getElementById(user).value;
     
-    var password=document.getElementById('password').value;
+    var password=document.getElementById(password).value;
     console.log(password);
     if(username=='' || password=='' || username!="abc" || password!=123){
         document.getElementById('error').innerHTML="Login Failed";
@@ -38,6 +38,142 @@ function validation(){
     }
     
 }
+
+function multiply(x,y){
+    return (x*y)+(x+y);
+} 
+
+
+var z, a;
+z = multiply(9,6);
+a = multiply(6,3);
+console.log(z);
+console.log(a);
+
+
+function totalresult(roll,s1,s2,s3,s4,s5,s6,s7,s8){
+    total= s1+s2+s3+s4+s5+s6+s7+s8;
+    if(total>100){
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+var result  = totalresult(1,10,20,40,10,10,20,20,20);
+var result2 = totalresult(2,10,10,10,10,10,10,10,10);
+document.getElementById("result").innerHTML=result+" "+result2;
+if(result2 ){
+    alert('Great');
+}
+
+var x = 5; //number
+var y = "5"; //string
+
+if(x===y){
+    console.log(typeof x);
+    console.log(typeof y);
+    console.log('yes');
+} else {
+    console.log(typeof x);
+    console.log(typeof y);
+    console.log('no');
+} 
+
+
+function fullname(firstname,lastname){
+ 
+    return "Welcome,"+firstname+" "+lastname; 
+}
+ var name= fullname('ajay','kumar');
+ console.log(name); 
+
+
+ /* work one */
+
+ function incr(word){
+   return "your entered"+ " "+ word
+ }
+
+ var addword=incr('welcome');
+
+ document.write(addword);
+
+
+
+ /* work three*/
+
+ function step(str,lmt){
+
+    limit=lmt;
+
+    for(start=str; start<=limit; start++){
+        document.write(start);
+    }
+
+
+ }
+
+step(5,9);
+step(1,9);
+step(3,9);
+step(4,9);
+step(5,9);
+step(1,9);
+step(1,10);
+
+</script>
+
+<br>
+<script>
+document.write("For In Loop");
+
+
+ /* work two */
+
+/* 
+ function doadd(ad=[]){
+     var sec=ad[0]+ad[1]
+ }
+ */
+
+
+
+function additionArr(group){
+    var totalArr = 0;
+    for(x in group){
+        document.write(group[x]);
+        totalArr +=  group[x];
+    }
+    console.log(totalArr);
+}
+
+var item=[10,50,60,70,10];
+var items=[10,50];
+additionArr(item);
+additionArr(items);
+
+var ii = 0;
+while(ii<10){
+    ii++;
+console.log("condition satisfied");
+}
+
+do{
+console.log('fire');
+} while(ii<10);
+
+
+// Set variable to 0
+let xm = 0;
+
+do {
+    // Increment variable by 1
+    xm++; //0+1 = 1 //1+1 = 2
+    console.log(xm); //1  //2
+} while (xm<2); //1<2 true  //2<2 false
+
 
 
 </script>
