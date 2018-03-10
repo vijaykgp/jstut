@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS Data Types</title>
+    <style>
+        #multitable{width: 50%}
+        
+        #multitable td{
+            border: 1px solid #666;
+            width: 5%;
+        }
+    </style>
 </head>
 <body>
     <h2>Login</h2>
@@ -17,6 +25,35 @@
     </form>
     <p id="result"></p>
 
+    <p id="who"></p>
+    <p class="multilple"></p>
+
+    <p id="multi"></p>
+
+<table id="multitable">
+      <tr>
+          <td>a</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+</table>  
+
+<form>
+<input id="dismulti" type="text" name="">
+<button type="button" onclick="range(2,10,2)">submit</button>
+
+
+</form>
+
+<div id="dismulti"></div>
+
 <script>
 
 
@@ -27,14 +64,16 @@ function validation(user, password){
     
     var password=document.getElementById(password).value;
     console.log(password);
-    if(username=='' || password=='' || username!="abc" || password!=123){
+    
+    if(username=="abc" && password==123){
+       window.location.href="file:///C:/xampp/htdocs/jstut/user/profile.html";
+    }
+    else
+    {
         document.getElementById('error').innerHTML="Login Failed";
         isvalid=false;
         return isvalid;
         console.log('add');
-    }
-    if(username=="abc" && password==123){
-       window.location.href="file:///C:/xampp/htdocs/jstut/user/profile.html";
     }
     
 }
@@ -174,7 +213,96 @@ do {
     console.log(xm); //1  //2
 } while (xm<2); //1<2 true  //2<2 false
 
+/* ============ Doubt =========*/
+ function west(age){
+     textadd = 0;
+     for(y in age){
+        document.getElementById('who').innerHTML=textadd += age[y];
+     }
+}
 
+
+red=[55,45,50,60];
+white=[100,200,300,400];
+      west(red);
+      west(white);
+/* ============ Doubt =========*/
+
+
+
+
+
+function mass(ras,bas){
+    var win=ras+bas;
+    document.write(win);
+}
+
+var ias='i love my inida';
+var veg='i love me';
+
+
+mass(ias,veg);
+
+
+</script>
+
+<script>
+    
+function range(k,lmt,mult){
+    
+    var mulArray = [];
+    for(k=1; k<=lmt; k++){ // 1<=10; 2  //2; 2<=10; 3
+       /*  document.write("</br>"+k*mult); */
+        //document.getElementById('multi').innerHTML=k*mult;
+        
+         mulArray[k] = k*mult;  //mulArray[1] = 1*2 //mulArray[2] = 2*2
+    }
+
+    console.log(mulArray);
+    document.getElementById('dismulti').innerHTML=mulArray;
+}
+
+range(2,10,2);  
+range(3,10,3);
+
+function stargrp(star,stars){
+   stars=[]; ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   {
+    star=0;
+    while(star<=stars){
+        document.write(star++)
+    }
+}
+
+
+var st='*';
+stargrp(1,st);
 
 </script>
 </body>
