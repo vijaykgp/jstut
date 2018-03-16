@@ -15,6 +15,9 @@
     </style>
 </head>
 <body>
+
+
+    
     <h2>Login</h2>
 
     <form>
@@ -23,6 +26,8 @@
         <input id="passwordd" type="password" name="pass">
         <input type="button" value="Login" onclick="validation('userr','passwordd')">
     </form>
+
+
     <p id="result"></p>
 
     <p id="who"></p>
@@ -53,6 +58,16 @@
 </form>
 
 <div id="dismulti"></div>
+
+<button type="button" onclick="star(b,c);">star</button>
+
+
+
+<textarea id="star">
+
+</textarea>
+
+
 <script>
     
 function validation(user, password){
@@ -72,6 +87,7 @@ function validation(user, password){
         return isvalid;
         console.log('add');
     }
+    
     
 }
 
@@ -119,14 +135,12 @@ if(x===y){
 
 
 function fullname(firstname,lastname){
- 
     return "Welcome,"+firstname+" "+lastname; 
 }
  var name= fullname('ajay','kumar');
  console.log(name); 
 
-
- /* work one */
+/* work one */
 
  function incr(word){
    return "your entered"+ " "+ word
@@ -180,7 +194,7 @@ function additionArr(group){
     var totalArr = 0;
     for(x in group){
         document.write(group[x]);
-        totalArr +=  group[x];
+        totalArr +=  group[x]; 
     }
     console.log(totalArr);
 }
@@ -262,44 +276,91 @@ function range(k,lmt,mult){
 range(2,10,2);  
 range(3,10,3);
 
-function stargrp(star,stars){
-   stars=[]; ]
+
+var row=5;
+for(i=1;i<=row;i++){
+
+   document.write('</br>');
+  
+    for(j=1;j<=i;j++){
+        document.write('*');
+    } 
+
+    for(k=1; k<=i; k++){
+       document.write('&nbsp')
+     } 
+
+   document.write('</br>');
+
+}
+
+
+function star(i,row){
+   row=5;
+   for(i=1;i<=row;i++){
+       for(j=1;j<=i;j++){
+           document.write('*');
+       }
+       document.write('</br>')
+   } 
+}
+
+b=1;
+c=20;
 
 
 
 
 
+function office(y){
+    for(x in y){
+        document.write(y[x]+" ");
+    }
+
+    document.write('<br/>');
+    
+}
+
+z=["rix","ib","inte"];
+r=['new','old','gold'];
+office(z);
+office(r);
 
 
 
+function ntorq(groupstar){
+    
+    for(i=0;i<=groupstar;i++){
+       
+        for(k=1;k<=(groupstar-i);k++){
+            document.write('&nbsp');
+        }
 
+         for(j=1;j<=i;j++){
+            document.write('*');
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   {
-    star=0;
-    while(star<=stars){
-        document.write(star++)
+        document.write('<br/>');
     }
 }
 
 
-var st='*';
-stargrp(1,st);
+lot=20;
+ntorq(lot);
+
+para=[{p:'lorem ispu my fav song slgi hgiu'},{s:'bond sign'}]
+for(h in para){
+    document.write(para[h].p, para[h].s);
+}
+
+
+
+dist=[{r:'hate',b:'vij'},{m:'trs',s:'hj'}];
+
+console.log(dist[0].r,dist[0].b)
+
+
+
 
 </script>
 </body>
